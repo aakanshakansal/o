@@ -1,0 +1,344 @@
+// #editor .fields * {
+//   box-sizing: border-box;
+// }
+#editor .elementNode {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#editor .elementNode:hover {
+  opacity: 0.8;
+}
+#editor .node {
+  // outline: solid 2px;
+  // border-top: solid 4px;
+  -webkit-backdrop-filter: blur(1em);
+  backdrop-filter: blur(1em);
+  width: 360px;
+  border-radius: 0.5em;
+}
+// #editor .promptInner ::-webkit-scrollbar-thumb {
+//   background: #bada55;
+// }
+
+#editor .nodeInner {
+  padding: 0em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5em;
+  gap: 0.5em;
+}
+#editor .nodeInner .nodeInner {
+  padding: 0.5em 0;
+}
+#editor .MuiInputBase-input {
+  text-align: left !important;
+}
+#editor .nodeHidden {
+  font-size: 0.8em;
+  opacity: 0.2;
+  margin-top: 0.5em;
+  width: 100%;
+  // display: none;
+  pointer-events: all;
+}
+
+#editor .nodeHidden:hover {
+  opacity: 1;
+}
+
+#editor .nodeHidden input {
+  background-color: transparent;
+  width: 100%;
+  margin-left: 0.2em;
+  // display: none;
+}
+
+#editor .nodeHeader {
+  display: flex;
+  border-radius: 0.5em;
+}
+
+#editor .nodeActions {
+  display: flex;
+  align-items: center;
+
+  padding-right: 0.2em;
+}
+
+#editor .nodeActions > * {
+  display: flex;
+  align-items: center;
+
+  height: 1.6em;
+  padding: 0 0.2em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+}
+
+#editor .nodeTitle {
+  cursor: move;
+  display: flex;
+  align-items: center;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-grow: 1;
+  align-items: center;
+  height: 2em;
+
+  padding: 0 0.5em;
+}
+
+#editor #overlayEditor {
+  height: 100% !important;
+  width: calc(100% - 320px) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 999;
+}
+
+#editor #overlayEditorButtons {
+  position: relative;
+}
+
+#editor #overlayEditorFrame {
+  height: 500px !important;
+}
+
+// #editor #overlayEditorBlocks .field label,
+// #editor #overlayEditorTraits .field label,
+// #editor #overlayEditorStyles .field label,
+// #editor #overlayEditorBlocks .field input,
+// #editor #overlayEditorTraits .field input,
+// #editor #overlayEditorStyles .field input,
+// #editor #overlayEditorBlocks .field select,
+// #editor #overlayEditorTraits .field select,
+// #editor #overlayEditorStyles .field select {
+//   width: 100%;
+//   text-align: left;
+// }
+#overlayEditorLayers,
+#overlayEditorBlocks,
+#overlayEditorStyles,
+#overlayEditorTraits {
+  width: 100%;
+}
+#overlayEditorLayers * {
+  box-sizing: content-box !important;
+}
+
+.gjs-block svg {
+  width: 100%;
+  height: 100%;
+  border: solid;
+}
+
+.gjs-block svg {
+  width: 100%;
+  height: 100%;
+  border: solid;
+}
+
+.gjs-block__media * {
+  font-size: 24px !important;
+}
+
+.gjs-block svg path:first-child {
+  fill: none;
+}
+
+.gjs-one-bg {
+  background-color: transparent !important;
+}
+
+.gjs-rte-toolbar {
+  background-color: #3b97e3 !important;
+}
+
+.gjs-cv-canvas {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  z-index: 0;
+}
+
+.gjs-pn-buttons {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gjs-pn-btn {
+  font-size: 1em !important;
+}
+
+.gjs-pn-panel {
+  padding: 0 !important;
+}
+
+.gjs-sm-properties {
+  padding: 1em;
+}
+
+.gjs-field-range {
+  background-color: transparent;
+}
+
+.gjs-radio-item input:checked + .gjs-radio-item-label {
+  font-weight: bold;
+}
+
+.gjs-editor-cont .sp-container {
+  left: unset !important;
+  right: 1em !important;
+}
+
+#customAm * {
+  box-sizing: border-box;
+}
+
+#customAm {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #11111190;
+  overflow: hidden;
+}
+
+#customAm > div {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background-color: #111111;
+  padding: 1em;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+
+#customAm > div .images > div {
+  padding-top: 1em;
+  overflow: auto !important;
+  flex-shrink: 0;
+  height: 70vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: start;
+}
+
+#customAm .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  color: #dedede;
+  border: none;
+  cursor: pointer;
+  margin: 4px;
+}
+
+#customAm input {
+  background-color: #222222;
+  color: #ffffff;
+  appearance: none;
+
+  border: none;
+  height: 1.6em;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  padding: 5px;
+}
+
+#customAm .prevnext {
+  text-align: center;
+}
+#customAm .prevnext button {
+  height: 1.6em;
+  cursor: pointer;
+  border: solid #dedede;
+  background-color: transparent;
+  color: #dedede;
+  margin: 1em;
+}
+
+#customAm .uplaodAsset {
+  height: 1.6em;
+  padding: 0 1em;
+  cursor: pointer;
+  border: solid #dedede;
+  background-color: transparent;
+  color: #dedede;
+}
+
+#customAm .image {
+  text-align: center;
+  cursor: pointer;
+  width: 25%;
+  margin-top: 2px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #222222;
+  padding: 4px;
+}
+
+#customAm .image img {
+  margin-top: 4px;
+}
+
+.light .overlayNode .gjs-sm-sector-label,
+.light .overlayNode .gjs-sm-sector-caret,
+.light .overlayNode .gjs-sm-label,
+.light .overlayNode .gjs-field,
+.light .overlayNode .gjs-caret-icon,
+.light .overlayNode .gjs-title,
+.light .overlayNode .gjs-block,
+.light .overlayNode .gjs-layer-title,
+.light .overlayNode .gjs-layer-vis,
+.light .overlayNode .gjs-clm-sels-info {
+  color: #222222;
+}
+
+.light .stats {
+  color: #222222 !important;
+}
+
+.light .overlayNode .gjs-field {
+  background-color: #ffffff;
+  border-radius: 0.5em;
+}
+
+.light .overlayNode .togglers .active {
+  color: #ffffff;
+}
+
+.recording {
+  border-color: #f44336 !important;
+  color: #f44336 !important;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

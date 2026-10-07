@@ -1,0 +1,182 @@
+#editor .steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#editor .step {
+  width: 20px;
+  height: 20px;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#editor .step svg {
+  width: 1em;
+  height: auto;
+}
+
+#editor .selectIcon {
+  width: 2em;
+  border: none;
+  outline: none;
+  border-radius: 3em;
+}
+
+#editor .selectIcon svg {
+  width: 1.6em;
+}
+
+#editor .selectIcon .MuiSelect-select {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#editor .selectIcon fieldset,
+#editor .selectIcon .MuiSvgIcon-root {
+  display: none;
+}
+
+#editor .removeNode,
+#editor .removeProp {
+  height: 1.6em;
+  width: 1.6em;
+  border-radius: 1.6em;
+
+  margin-right: 1em;
+  flex-shrink: 0;
+}
+
+.frameSlider .MuiSlider-thumb {
+  border-radius: 0;
+  margin-top: -1em;
+  height: 1.6em;
+  width: 0.5em;
+  margin-left: -0.25em;
+
+  //  transform: rotate(45deg);
+}
+.keyFrames {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.keyFrames .MuiSlider-thumb:hover {
+  z-index: 1;
+}
+.keyFrames .MuiSlider-thumb .keyFrameInner {
+  display: none !important;
+  text-align: center;
+  top: 0%;
+  position: absolute;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 3em;
+  height: 1.6em;
+  margin-left: -1.5em;
+}
+.keyFrames .MuiSlider-thumb .keyFrameInner .removeKeyFrame {
+  position: absolute;
+  top: -1em;
+  line-height: 1em;
+  background: $color-red;
+  color: $color-white;
+  width: 1em !important;
+  height: 1em !important;
+  border-radius: 1em;
+}
+.keyFrames .MuiSlider-thumb:hover .keyFrameInner {
+  display: flex !important;
+  background: $color-green;
+  color: $color-dark;
+  z-index: 1;
+}
+
+.keyFrames .MuiSlider-trackFalse,
+.keyFrames .MuiSlider-rail {
+  height: 1.6em;
+  background-color: $color-dark-20;
+}
+
+.keyFrames .MuiSlider-thumb {
+  border-radius: 0;
+  margin-top: 0;
+  height: 1.6em;
+  width: 0.5em;
+  margin-left: -0.25em;
+
+  //  transform: rotate(45deg);
+}
+.keyFrames .MuiSlider-thumb:hover {
+  // border-radius: 2em;
+  // transform: rotate(0);
+}
+
+// #editor .frameSlider .MuiSlider-thumb {
+//   height: 100%;
+//   /* top: 120%; */
+//   transform: translate(0, 0);
+//   border-radius: 0;
+//   width: 1em;
+// }
+
+#editor .keyFrames .key {
+  width: auto;
+  padding: 0 0.5em;
+  height: 1.6em;
+
+  text-align: center;
+  border-radius: 1em;
+  margin-right: 4px;
+}
+
+#editor .keyFrames .removeKey {
+  width: 1em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
+#editor .animateRow {
+  border-left: solid 1px;
+  margin-bottom: 1em;
+}
+
+#editor .animateNodeButton {
+  display: flex;
+  border-bottom: solid 1px;
+  margin-top: 1em;
+  align-items: center;
+}
+#editor .animateRowSettings {
+  display: flex;
+
+  align-items: center;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+}
+
+// #editor .animateRowSettings > div {
+//   padding-left: 1em;
+// }
+
+#editor .animateRowSettings label {
+  width: 180px;
+}
+
+.MuiButtonBase-root .easeIcon {
+  margin-right: 0.5em;
+}
+
+.easeIcon svg {
+  width: 1.2em;
+  height: 1.2em;
+}

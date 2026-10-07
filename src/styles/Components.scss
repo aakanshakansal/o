@@ -1,0 +1,19 @@
+@import "../sceneComponents/Scene.scss";
+
+$primaryColor: $color-default;
+$secondaryColor: $color-white;
+$tertiaryColor: $color-dark;
+$quaternaryColor: $color-green;
+@import "grapesjs/src/styles/scss/main.scss";
+@import "../modules/pages/Pages.scss";
+
+@import "../modules/editor/Flow/Flow.scss";
+@import "../modules/editor/Nodes/Nodes.scss";
+@import "../modules/editor/Nodes/Actions/Actions.scss";
+@import "../modules/editor/Buttons/Buttons.scss";
+@import "../modules/editor/Lists/Lists.scss";
+
+@import "../modules/editor/Prompt/Prompt.scss";
+@import "../modules/editor/NodeFields/NodeFields.scss";
+@import "../modules/editor/Editor.scss";
+@import "react-toastify/dist/ReactToastify.css";

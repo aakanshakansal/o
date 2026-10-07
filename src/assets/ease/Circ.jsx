@@ -1,0 +1,9 @@
+export const Circ = () => {
+  return (
+    <div className="easeIcon">
+      <svg width="143" height="143" viewBox="0 0 143 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="71.5" cy="71.5" r="67" stroke="currentColor" strokeWidth="9" />
+      </svg>
+    </div>
+  );
+};

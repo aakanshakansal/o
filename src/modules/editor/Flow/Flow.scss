@@ -1,0 +1,239 @@
+#editor .react-flow__container {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+#editor .react-flow__panel a {
+  display: none;
+}
+
+#editor .react-flow__node {
+  cursor: auto;
+}
+
+#editor .react-flow__edge {
+  opacity: 0.8;
+}
+
+#editor .react-flow__edge.selected {
+  opacity: 1;
+}
+
+#editor path.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+#editor .react-flow__edge.selected path.react-flow__edge-path {
+  stroke-width: 3;
+}
+
+#editor .referenceHandle .handles .sourceHandle {
+  margin-top: 1.8em;
+}
+
+#editor .sourceHandle {
+  margin-top: 1.4em;
+  height: 1.4em;
+  width: 1.4em;
+  position: absolute;
+  top: unset;
+  right: -0.6em;
+  border: solid 1px;
+  border-radius: 1em;
+  transition: 0.5s;
+}
+
+#editor .targetHandle {
+  height: 1.6em;
+  width: 1.6em;
+  position: absolute;
+  top: 50%;
+  left: -1.6em;
+  border: solid 1px;
+  border-radius: 1em;
+  transition: 0.5s;
+}
+
+#editor .targetHandle.turquoise,
+#editor .sourceHandle.turquoise {
+  background-color: $color-default;
+  border-color: $color-turquoise;
+  color: $color-turquoise;
+}
+
+#editor .targetHandle.turquoise.connected,
+#editor .sourceHandle.turquoise.connected {
+  background-color: $color-turquoise;
+  border-color: $color-turquoise;
+  color: $color-default;
+}
+
+#editor .targetHandle.red,
+#editor .sourceHandle.red {
+  background-color: $color-default;
+  border-color: $color-red;
+  color: $color-red;
+}
+
+#editor .targetHandle.red.connected,
+#editor .sourceHandle.red.connected {
+  background-color: $color-red;
+  border-color: $color-red;
+  color: $color-default;
+}
+
+#editor .targetHandle.green,
+#editor .sourceHandle.green {
+  background-color: $color-default;
+  border-color: $color-green;
+  color: $color-green;
+}
+
+#editor .targetHandle.green.connected,
+#editor .sourceHandle.green.connected {
+  background-color: $color-green;
+  border-color: $color-green;
+  color: $color-default;
+}
+
+#editor .targetHandle.orange,
+#editor .sourceHandle.orange {
+  background-color: $color-default;
+  border-color: $color-orange;
+  color: $color-orange;
+}
+
+#editor .targetHandle.orange.connected,
+#editor .sourceHandle.orange.connected {
+  background-color: $color-orange;
+  border-color: $color-orange;
+  color: $color-default;
+}
+
+#editor .targetHandle:after,
+#editor .sourceHandle:after {
+  content: "➔";
+  height: 100%;
+  font-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#editor .targetHandle.multiple,
+#editor .sourceHandle.multiple {
+  margin-top: 0em;
+}
+
+#editor .sourceHandle.multiple {
+  right: -1em;
+  height: 1.8em;
+  width: 1.8em;
+}
+#editor .targetHandle.multiple {
+  left: -1.6em;
+  height: 1.8em;
+  width: 1.8em;
+}
+#editor .referenceHandle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  width: 100%;
+}
+#editor .referenceHandle .handles {
+  align-items: center;
+  display: flex;
+  width: 160px;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+#editor .referenceHandle .handles .meshTriggerButton {
+  margin-right: -1em;
+}
+#editor .referenceHandle .handles .sceneTriggerButton {
+  margin-right: -1em;
+}
+
+#editor .references {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 0 0;
+  display: block;
+}
+
+#editor .references .referencesTitle {
+  min-width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  height: 1.6em;
+  padding: 0 0.5em;
+}
+
+#editor .references .referencesList {
+  padding: 0.5em;
+}
+#editor .actionInputHandle {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+}
+
+#editor .actionHandles {
+  display: flex;
+  justify-content: space-between;
+}
+
+#editor .actionInputHandle {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+}
+
+#editor .actionInputHandle button {
+  margin: 0;
+  margin-left: -1em;
+  width: auto !important;
+  padding-left: 1.5em;
+  padding-right: 1em;
+
+  justify-content: flex-start;
+}
+
+#editor .actionInputHandle button svg {
+  height: 1.6em;
+  width: 1.6em;
+  margin-left: 0.5em;
+}
+
+#editor .actionEndHandle {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+}
+
+#editor .actionEndHandle .sourceHandle {
+  margin-top: 0.8em;
+  right: -1.5em;
+}
+
+#editor .actionEndHandle button {
+  margin: 0;
+  margin-right: -1em;
+  width: auto !important;
+  padding-right: 1.5em;
+  padding-left: 1em;
+
+  justify-content: flex-start;
+}
+
+#editor .actionEndHandle button svg {
+  height: 1.6em;
+  width: 1.6em;
+  margin-left: 0.5em;
+}

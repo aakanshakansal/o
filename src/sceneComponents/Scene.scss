@@ -1,0 +1,741 @@
+.overAll {
+  width: 100%;
+}
+.overAll > div > * {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#scene {
+  user-select: none;
+}
+
+#thumbnail {
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  position: fixed;
+  height: 100%;
+  height: webkit-fill-available;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s;
+  z-index: 808;
+}
+
+#thumbnail {
+  form {
+    text-align: center;
+  }
+  button {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  #thumbPass {
+    margin-top: 2em;
+    border: none;
+    border-radius: 0.2em;
+    height: 1.6em;
+    padding: 0 1em;
+  }
+}
+
+#renderCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: webkit-fill-available;
+  touch-action: none;
+  outline: none !important;
+}
+
+#sceneContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#sceneContainer #scene {
+  width: 100%;
+  height: 100%;
+  height: webkit-fill-available;
+}
+
+#loadingScreen.loaded {
+  opacity: 0;
+}
+
+#loadingScreen {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 1;
+  transition: opacity 0.5s;
+  z-index: 40;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  height: webkit-fill-available;
+
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+#loadingScreen.item-enter {
+  opacity: 0;
+}
+#loadingScreen.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+#loadingScreen.item-exit {
+  opacity: 1;
+}
+#loadingScreen.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+#curtainProgressBar {
+  transition: all 1s;
+}
+
+#loadingScreenProgressBar {
+  transition: all 1s;
+}
+
+#start {
+  border: solid 1px;
+
+  padding: 0.5em 1em;
+  background-color: transparent;
+  cursor: pointer;
+
+  backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  border-radius: 0.2em;
+}
+
+.beh {
+  text-align: center;
+
+  position: relative;
+}
+
+.beh #loadingLogo {
+  width: 100%;
+  animation: opac 2s infinite ease-in-out;
+}
+
+@-webkit-keyframes opac {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.progressBar.left {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background-color: #000000;
+  border-radius: 100%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+  animation-delay: 0.5s;
+  position: absolute;
+  top: 50px;
+  left: 28px;
+  opacity: 0;
+}
+
+.progressBar.right {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  background-color: #000000;
+  border-radius: 100%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+  animation-delay: 0.5s;
+  position: absolute;
+  top: 50px;
+  left: 54px;
+  opacity: 0;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+#sceneFeedback {
+  position: fixed;
+  z-index: 1;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 2s,
+    height 0.3s,
+    width 0.3s;
+  transition-timing-function: ease-in-out;
+  opacity: 0;
+
+  border-radius: 50%;
+}
+
+#enterVrContainer {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1em);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+#enterVrContainer button {
+  padding: 1em 2em;
+  border-radius: 10em;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#sceneFeedback.active {
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.spinner {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  height: webkit-fill-available;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+#intro {
+  transition: opacity 0.5s;
+  object-fit: cover;
+}
+
+#introContainer {
+  width: 100%;
+  height: 100%;
+  height: webkit-fill-available;
+  z-index: 500;
+  position: fixed;
+  opacity: 1;
+  transition: opacity 0.5s;
+  top: 0;
+  left: 0;
+}
+
+#skipIntro {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+#cursorTooltip {
+  z-index: 1000;
+  border-radius: 4px;
+  display: none;
+  padding: 4px 8px;
+  max-width: 300px;
+  margin: 2px;
+  overflow-wrap: break-word;
+  font-weight: 500;
+}
+
+.dialogStyle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #161b22;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  user-select: none;
+}
+
+#sceneLoading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // pointer-events: none;
+  z-index: 100;
+}
+
+#arQrContainer,
+#sceneDialogContainer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#arQrInner {
+  width: 13em;
+
+  background-color: $color-white;
+  position: relative;
+}
+
+#arQrInner button {
+  position: absolute;
+  top: -1em;
+  right: -1em;
+  height: 2em;
+  width: 2em;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+#arQrText {
+  font-size: 0.8em;
+  padding: 1em;
+  text-align: center;
+}
+#arQrIcons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1em;
+}
+
+#arQrIcons svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 0.5em;
+}
+
+#arQrCode {
+  width: 13em !important;
+  height: auto !important;
+
+  cursor: pointer;
+}
+
+#overlays {
+  width: 100%;
+  height: 100%;
+}
+
+// .editmode #overlays {
+//   width: calc(100% - 320px) !important;
+// }
+
+#overlays .overlayContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  z-index: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+#overlays .overlay {
+  pointer-events: none;
+  height: 100%;
+}
+
+.runtime-material-controls {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: min(360px, calc(100% - 2rem));
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 15, 15, 0.78);
+  backdrop-filter: blur(8px);
+  color: #f1f1f1;
+  z-index: 6;
+  pointer-events: auto;
+}
+
+.runtime-material-controls.collapsed {
+  width: auto;
+}
+
+.runtime-material-controls-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  color: inherit;
+  background: rgba(0, 0, 0, 0.3);
+  font: inherit;
+  cursor: pointer;
+  padding: 0.75rem;
+}
+
+.runtime-material-controls-body {
+  max-height: min(420px, 56vh);
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.runtime-material-controls-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.runtime-material-controls-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 0.4rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.runtime-material-controls-reset:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.runtime-material-controls-reset .material-symbols-outlined {
+  font-size: 1.05rem;
+}
+
+.runtime-material-controls-debug {
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  background: rgba(255, 193, 7, 0.12);
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.runtime-material-controls-debug ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1rem;
+}
+
+.runtime-material-controls-group {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.runtime-material-controls-group h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.runtime-material-control-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.7rem;
+}
+
+.runtime-material-control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.runtime-material-control-title-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.runtime-material-control-dirty-dot {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: #33d17a;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.runtime-material-control-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.runtime-material-control-meta {
+  margin-top: 0.1rem;
+  font-size: 0.68rem;
+  color: rgba(241, 241, 241, 0.72);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.runtime-material-control-reset {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 0.35rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.runtime-material-control-reset:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.runtime-material-control-reset .material-symbols-outlined {
+  font-size: 0.9rem;
+}
+
+.runtime-material-control-field input[type="range"],
+.runtime-material-control-field input[type="number"],
+.runtime-material-control-field select {
+  width: 100%;
+}
+
+.runtime-material-control-field input[type="color"] {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  background: transparent;
+}
+
+.runtime-material-control-field input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.runtime-material-control-field small {
+  color: rgba(241, 241, 241, 0.75);
+  font-size: 0.72rem;
+}
+
+.watermark {
+  background-color: rgb(255, 255, 255) !important;
+  border-radius: 4em;
+  position: fixed !important;
+  bottom: 1em !important;
+  left: 1em !important;
+  opacity: 0.4;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  transition: all 0.5s;
+  z-index: 999999999999 !important;
+  height: 2em;
+  width: 2em;
+  max-width: 2em;
+}
+
+.watermark #type {
+  display: none !important;
+}
+
+.watermark:hover #type {
+  display: block !important;
+}
+
+.watermark:hover {
+  width: auto;
+  padding: 0 1em;
+  max-width: 300px;
+  opacity: 0.9;
+}
+
+.arSplash {
+  text-align: center;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #dedede;
+  padding: 2em;
+}
+
+.arSplash h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.arSplash .buttons button {
+  width: 100%;
+  max-width: 320px !important;
+  display: flex;
+  height: 4.2em;
+  border-radius: 4.2em;
+  position: relative;
+}
+
+.arSplash .buttons button img {
+  margin-right: 1em;
+  background-color: #ffffff;
+  width: 3em;
+  height: 3em;
+  border-radius: 3em;
+  position: absolute;
+  left: 0.6em;
+}
+
+.arSplash .buttons {
+  width: 100%;
+  gap: 1em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiTooltip-popper * {
+  font-size: 0.8em !important;
+}
+
+// .watermark #sygn {
+//   width: 0;
+//   transition: 0.5s ease;
+//   opacity: 0 !important;
+// }
+
+// .watermark:hover #sygn {
+//   width: 100%;
+//   opacity: 1 !important;
+// }
+.fourOFourContainer {
+  text-align: center;
+}
+
+.fourOFourContainer a {
+  color: $color-orange;
+}
+.scenePasswordContainer,
+.fourOFourContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-dark;
+  color: $color-light;
+  flex-wrap: nowrap;
+}
+
+.scenePasswordContainer div {
+  align-items: center;
+  justify-content: center;
+}
+
+.scenePasswordContainer input {
+  background-color: transparent;
+  border: solid 1px $color-light;
+  padding: 0.5em;
+  border-radius: 0.5em 0 0 0.5em;
+}
+.scenePasswordContainer button {
+  margin-left: -1px;
+  background-color: transparent;
+  border: solid 1px $color-light;
+  padding: 0.5em 1em;
+  border-radius: 0 0.5em 0.5em 0;
+}
+
+.scenePasswordContainer button:hover {
+  background-color: $color-default;
+}
+
+.scenePasswordContainer button:active {
+  background-color: $color-light;
+  color: $color-dark;
+}

@@ -1,0 +1,6 @@
+Environment variables found:
+
+- NODE_ENV
+- PUBLIC_URL
+
+Total: 2

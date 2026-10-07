@@ -1,0 +1,187 @@
+#editor .FunctionButton {
+  border-radius: 0.5em;
+  background-color: rgba(117, 117, 117, 0.6);
+}
+
+.FunctionButton:hover {
+  background-color: $color-green-20 !important;
+}
+.FunctionButton:active {
+  color: $color-dark !important;
+  background-color: $color-green !important;
+}
+
+.FunctionButton.active {
+  color: $color-dark !important;
+  background-color: $color-green !important;
+}
+
+#editor .field {
+  position: relative;
+  width: 100%;
+}
+
+#editor .field.third {
+  width: 31%;
+}
+#editor .field.half {
+  width: 48%;
+}
+
+#editor .field .map {
+  outline: solid 3px $color-green-50;
+  background: $color-green-50;
+}
+#editor .field .map.framed {
+  outline: solid 3px $color-green;
+}
+#editor .field.Spacer {
+  height: 1em;
+}
+// #editor .container {
+//   margin: 0.5em 0;
+// }
+// #editor .container .field {
+//   margin: 0px 0;
+// }
+
+#editor .field.Title {
+  // border-top: solid 2px;
+  // margin-top: 0.5em;
+  font-weight: bold;
+}
+
+#editor .field.Boolean {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// #editor .field.Spacer {
+//   height: 0.5em;
+// }
+
+// #editor .field input,
+// #editor .field select,
+// #editor .field textarea {
+//   display: block;
+//   border-radius: 0.5em;
+//   border: none;
+//   width: 100%;
+//   text-align: right;
+
+//   height: 1.6em;
+//   padding-right: 0.5em;
+// }
+
+// #editor .field textarea {
+//   height: 200px;
+//   text-align: left;
+// }
+
+// #editor .field select {
+//   border-radius: 2em;
+// }
+
+// #editor .field select[multiple] {
+//   height: 100px;
+//   border-radius: 0.5em;
+// }
+
+// #editor .field label {
+//   position: absolute;
+//   left: 1.5em;
+//   height: 1.6em;
+//   display: flex;
+//   top: 0;
+//   align-items: center;
+//   pointer-events: none;
+// }
+
+#editor .field input[type="color"] {
+  border-radius: 0.5em;
+  height: 1.6em;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+#editor .field input[type="color"] + .label {
+  position: absolute;
+  left: 0.5em;
+  top: 0.1em;
+  color: #ffffff;
+  mix-blend-mode: exclusion;
+}
+
+#editor .field .colorValue {
+  position: absolute;
+  right: 0.5em;
+  top: 0.1em;
+  color: #ffffff;
+  mix-blend-mode: exclusion;
+}
+
+// #editor .field input[type="range"] {
+//   margin-top: -2em;
+//   width: 100%;
+//   padding: 0;
+//   height: 1px;
+//   margin: 0;
+//   display: block;
+// }
+
+// #editor .field.Range input[type="number"] {
+//   border-radius: 0.5em 0.5em 0 0;
+// }
+// #editor .field.Boolean {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+// #editor .field.Boolean label {
+//   position: relative;
+//   left: 0.5em;
+// }
+// #editor .field.Boolean input {
+//   width: 1em;
+//   height: 1em;
+// }
+
+// #editor .Vector3 {
+//   display: block;
+//   margin: 0.8em 0;
+// }
+// #editor .Vector3 > label {
+//   margin-left: 1.5em;
+// }
+// #editor .Vector3 .field {
+//   margin: 0;
+// }
+
+#editor .math .field.third,
+#editor .math .field.half,
+#editor .condition .field.third,
+#editor .condition .field.half,
+#editor .animateRow .field,
+#editor .animateRow .field.third,
+#editor .animateRow .field.half,
+#editor .react-flow__node-ControlNode .field,
+#editor .react-flow__node-ControlNode .field.third,
+#editor .react-flow__node-ControlNode .field.half {
+  width: 100%;
+}
+
+#editor .math .targetHandle,
+#editor .condition .targetHandle,
+#editor .animateRow .targetHandle,
+#editor .react-flow__node-ControlNode .targetHandle {
+  display: none;
+}
+
+#editor .animateRow .FunctionButton,
+#editor .react-flow__node-ControlNode .FunctionButton {
+  margin-left: 0 !important;
+  padding-left: 1em !important;
+}

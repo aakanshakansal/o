@@ -1,0 +1,117 @@
+.icons-flex {
+  height: 25px;
+  scale: 0.75;
+}
+
+.icon-dir-row {
+  background: url("./grapesFlexIcons/flex-dir-row.png") no-repeat center;
+}
+
+/* .icon-dir-row::after {
+  content: "row";
+  position: absolute;
+  font-size: 1.4em;
+  bottom: -15px;
+  left: 0;
+} */
+
+.icon-dir-row-rev {
+  background: url("./grapesFlexIcons/flex-dir-row-rev.png") no-repeat center;
+}
+
+/* .icon-dir-row-rev::after {
+  content: "row-rev";
+  position: absolute;
+  font-size: 1.4em;
+  bottom: -15px;
+  left: 0;
+} */
+
+.icon-dir-col {
+  background: url("./grapesFlexIcons/flex-dir-col.png") no-repeat center;
+}
+
+/* 
+.icon-dir-col::after {
+  content: "ciao";
+} */
+
+.icon-dir-col-rev {
+  background: url("./grapesFlexIcons/flex-dir-col-rev.png") no-repeat center;
+}
+
+/* .icon-dir-col-rev::after {
+  content: "ciao";
+} */
+
+.icon-just-start {
+  background: url("./grapesFlexIcons/flex-just-start.png") no-repeat center;
+}
+
+/* .icon-just-start::after {
+  content: "ciao";
+} */
+
+.icon-just-end {
+  background: url("./grapesFlexIcons/flex-just-end.png") no-repeat center;
+}
+
+/* .icon-just-end::after {
+  content: "ciao";
+} */
+
+.icon-just-sp-bet {
+  background: url("./grapesFlexIcons/flex-just-sp-bet.png") no-repeat center;
+}
+
+/* .icon-just-sp-bet::after {
+  content: "ciao";
+} */
+
+.icon-just-sp-ar {
+  background: url("./grapesFlexIcons/flex-just-sp-ar.png") no-repeat center;
+}
+
+/* .icon-just-sp-ar::after {
+  content: "ciao";
+} */
+
+.icon-just-sp-cent {
+  background: url("./grapesFlexIcons/flex-just-sp-cent.png") no-repeat center;
+}
+
+/* .icon-just-sp-cent::after {
+  content: "ciao";
+} */
+
+.icon-al-start {
+  background: url("./grapesFlexIcons/flex-al-start.png") no-repeat center;
+}
+
+/* .icon-al-start::after {
+  content: "ciao";
+} */
+
+.icon-al-end {
+  background: url("./grapesFlexIcons/flex-al-end.png") no-repeat center;
+}
+
+/* .icon-al-end::after {
+  content: "ciao";
+} */
+
+.icon-al-str {
+  background: url("./grapesFlexIcons/flex-al-str.png") no-repeat center;
+}
+
+/* .icon-al-str::after {
+  content: "ciao";
+} */
+
+.icon-al-center {
+  background: url("./grapesFlexIcons/flex-al-center.png") no-repeat center;
+}
+
+/* .icon-al-center::after {
+  content: "ciao";
+} */

@@ -1,0 +1,21 @@
+.list {
+  margin-bottom: 1.6em;
+}
+
+.list .sublistHeader {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: solid 1px;
+  margin-left: -0.5em;
+  padding-left: 1em;
+  padding-bottom: 0.4em;
+  padding-right: 1em;
+}
+
+.list .sublistGroup {
+  padding-top: 0.5em;
+}
+
+// LIGHT

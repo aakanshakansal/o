@@ -1,0 +1,113 @@
+{
+  "hosting": [
+    {
+      "target": "badvisor",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "/assets/**",
+          "destination": "/assets/$1"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/assets/*.env",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/octet-stream"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://*.badvisor*.web.app"
+            }
+          ]
+        },
+        {
+          "source": "/**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://*.badvisor*.web.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "badvisor-staging",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "/api/*/*",
+          "function": "api"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://*.badvisor*.web.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "badvisor-dev",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/**",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "https://*.badvisor*.web.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "badvisor-experimental",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "api"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": ["node_modules", ".git", "firebase-debug.log", "firebase-debug.*.log"]
+    }
+  ]
+}
